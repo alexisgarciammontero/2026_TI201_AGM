@@ -13,7 +13,6 @@ package Tema1IDE;
 public class HellowWordApp {
     public static void main(String[] args) {
         HellowWorld hello= new HellowWorld();
-        
         hello.sayHellow("Alaxis Garcia Montero");
     }
 }
