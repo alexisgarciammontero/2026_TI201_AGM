@@ -61,11 +61,31 @@ public class Torta {
 
     @Override
     public String toString() {
-        return "Torta{" + "nombre=" + nombre + ", ingredientes=" + ingredientes + ", precio=" + precio + '}';
+        
+        if (numIngredientes !=0){
+        String listaDeIngredientes = "";
+        for (int i=0; i <numIngredientes; i++)
+            listaDeIngredientes += ingredientes [i] ==null?"":ingredientes[i] + ",";
+        }
+        
+        return "Torta{" + "nombre=" + nombre + ", listaIngredientes=" 
+                + numIngredientes + ", precio=" + precio
+                + ", numIngredientes=" + numIngredientes + '}';
     }
 
+   
+
+    /*
+    *Agrega un nuevo ingrediente y lanza la exception si ha llegado al numero 
+    *maximo de ingredientes
+    *
+    *
+    */
+    
+    
     public void agregarIngrediente(String ingrediente) throws Exception { 
         if (numIngredientes <=Max_Ingredientes){
+            System.out.println("Numero Maximo de ingredientes");
             throw new Exception("Maxima cantidad de ingredientes");
            
         }

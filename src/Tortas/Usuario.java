@@ -1,7 +1,7 @@
 
 package Tortas;
 
-public class Usuarios {
+public class Usuario {
   
     private String usuario;
 
